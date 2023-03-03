@@ -1,0 +1,624 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-weight: bold;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        th {
+            background-color: rgba(91, 155, 213, 255);
+            border: 1px solid black;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(210, 222, 239, 255);
+        }
+
+        p {
+            font-weight: bold;
+
+        }
+
+        .one {
+            /* background: green; */
+        }
+
+        .two {
+            display: none;
+            /* background: red; */
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        /* Safari syntax */
+        :-webkit-full-screen {
+            background-color: white;
+        }
+
+        /* IE11 syntax */
+        :-ms-fullscreen {
+            background-color: white;
+        }
+
+        /* Standard syntax */
+        :fullscreen {
+            background-color: white;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //initially hide second h1
+            $(".one").hide();
+            $(".two").hide();
+            $(".three").hide();
+            $(".third").hide();
+            $(".four").hide();
+            $(".five").hide();
+            $(".six").hide();
+
+            function show_zero() {
+                $(".zero").show();
+                $(".one").hide();
+                $(".two").hide();
+                $(".third").hide();
+                $(".four").hide();
+                $(".five").hide();
+                $(".six").hide();
+                setTimeout(show_first, 10000);
+            }
+
+            function show_second() {
+                $(".zero").hide();
+                $(".one").hide();
+                $(".two").show();
+                $(".third").hide();
+                $(".four").hide();
+                $(".five").hide();
+                $(".six").hide();
+                setTimeout(show_third, 10000);
+            }
+
+
+            function show_first() {
+                $(".zero").hide();
+                $(".one").show();
+                $(".two").hide();
+                $(".third").hide();
+                $(".four").hide();
+                $(".five").hide();
+                $(".six").hide();
+                setTimeout(show_second, 10000);
+            }
+
+            function show_third() {
+                $(".zero").hide();
+                $(".one").hide();
+                $(".two").hide();
+                $(".third").show();
+                $(".four").hide();
+                $(".five").hide();
+                $(".six").hide();
+                setTimeout(show_four, 10000);
+            }
+
+            function show_four() {
+                $(".zero").hide();
+                $(".one").hide();
+                $(".two").hide();
+                $(".third").hide();
+                $(".four").show();
+                $(".five").hide();
+                $(".six").hide();
+                setTimeout(show_five, 10000);
+            }
+            function show_five() {
+                $(".zero").hide();
+                $(".one").hide();
+                $(".two").hide();
+                $(".third").hide();
+                $(".four").hide();
+                $(".five").show();
+                $(".six").hide();
+                setTimeout(show_six, 10000);
+            }
+
+            function show_six() {
+                $(".zero").hide();
+                $(".one").hide();
+                $(".two").hide();
+                $(".third").hide();
+                $(".four").hide();
+                $(".five").hide();
+                $(".six").show();
+                setTimeout(show_zero, 10000);
+            }
+
+            setTimeout(show_zero, 10000);
+
+        });
+
+        var elem = document.documentElement;
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            }
+            else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <br>
+    <br>
+    <img src="left.png" style="float: left; height: 150px; width: 300px;">
+    <img src="mid.png" style="text-align: center; margin-left:25%; height: 150px; width: 300px;">
+    <img src="right.jpg" style="float: right; height:150px; width:150px">
+
+
+    <div class="zero">
+        <p style=" font-size: 50px;">
+            <br>
+            (i) Name of Industry with contact Number : TATA Motors Ltd., Jamshedpur <br> <br>
+            (ii) Date of update of display : 27th Feb 2023<br> <br>
+            (iii) Details of updated consent to operate and authorization with validity :
+            CTO : JSPCB/HO/RNC/CTO-13926279/2022/1775 dated 24/12/2022 valid till
+            31/12/2025 <br> <br>
+            Haz. Waste Auth.: JSPCB/HO/RNC/HWM-4125630/2020/2 14/01/2020 valid
+            31/12//2023 <br> <br>
+            (iv) Details of operational status : Operational
+        </p>
+    </div>
+    <div class="four">
+
+        <P style="text-align: left; font-size:30px; color:rgba(11, 112, 38)">Air Emission:</P>
+        <table style="width:100%; font-size: 30px;">
+            <tr>
+                <th>SL. No</th>
+                <th>DESCRIPTION</th>
+                <th>LIMITS</th>
+                <th>ACTUALS</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>CPS-1 ATH Boiler Aqua Thermal Heating</td>
+                <td> M : 27.3<br>
+
+                    SO2: 12.4<br>
+
+                    NOx: 31.3</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>CCPS- Coloring Loop Baking Oven - I</td>
+                <td> SPM :23.4<br>
+                    SO2:26.2<br>
+                    NOx: 48.61</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>CPS- Coloring Loop Baking Oven -II</td>
+                <td> SPM :29.8<br>
+                    SO2:17,57<br>
+                    NOx: 38.3</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>Foundry Stack No.- 1</td>
+                <td> SPM : 24.58</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>Foundry Stack No.- 2</td>
+                <td> SPM : 24.89</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>D.G. Fujitoyodenki-2</td>
+                <td> SPM : 33,68<br>
+
+                    SO2: 23.1<br>
+
+                    NOx: 63.88</td>
+                <td>SPM :150</td>
+            </tr>
+        </table>
+    </div>
+    <div class="five">
+
+        <P style="text-align: left; font-size:30px; color:rgba(11, 112, 38)">Air Emission:</P>
+        <table style="width:100%; font-size: 30px;">
+            <tr>
+                <th>SL. No</th>
+                <th>DESCRIPTION</th>
+                <th>LIMITS</th>
+                <th>ACTUALS</th>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>D.G. Fujitoyodenki-5</td>
+                <td> SPM : 34.5<br>
+
+                    SO2: 27.1<br>
+
+                    NOx: 69.03</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>D.G. Fujitoyodenki-7</td>
+                <td> SPM : 35.9<br>
+
+                    SO2: 25.5<br>
+
+                    NOx: 67.96</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>D.G. Fujitoyodenki-8</td>
+                <td> SPM : 36.28 <br>
+
+                    SO2: 29.04<br>
+
+                    NOx: 68.74</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>D.G. (Nigatta)</td>
+                <td> SPM : 36.4<br>
+
+                    SO2: 26.64<br>
+
+                    NOx: 65.58</td>
+                <td>SPM :150</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Industrial Incinerator</td>
+                <td> SPM : 29.3<br>
+
+                    SO2: 20.4<br>
+
+                    NOx: 79.9</td>
+                <td>SPM :150</td>
+            </tr>
+
+        </table>
+
+    </div>
+    <div class="six">
+
+        <P style="text-align: left; font-size: 30px; color: brown">Effluent Discharge : </P>
+        <table style="width:100%; font-size: 30px;">
+            <tr>
+                <th>SL. No</th>
+                <th>Source of Effluent <br>
+                    Discharge with Quantity <br>
+                    (ex: Process waste <br>
+                    water, domestic effluent etc.)</th>
+                <th>Treatment method <br>
+                    (ETP with capacity or <br>
+                    any other method)</th>
+                <th>Mode of disposal of <br>
+                    treatment <br>
+                    (Drain/sewer/land etc.)</th>
+                <th>Effluent discharge <br>
+                    Monitoring (pH, COD, <br>
+                    BOD, TSS, etc.)</th>
+
+            </tr>
+            <tr>
+                <td>01</td>
+                <td><br>Process waste water <br></td>
+                <td> WWTP unit A-2500
+                    M3/day<br></td>
+                <td>Reuse in process<br></td>
+                <td rowspan="4">
+                    pH: 7.7 <br> <br> <br>
+                    COD: 15.87 mg/l <br> <br> <br>
+                    BOD : 3.66 mg/l <br> <br> <br>
+                    TSS : 29.33 mg/l
+                </td>
+            </tr>
+            <tr>
+                <td>02<br></td>
+                <td>Process waste water<br></td>
+                <td> WWTP unit B -2500
+                    M3/day<br></td>
+                <td>Discharge outside after
+                    treatment in Drain</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td>03<br></td>
+                <td>Effluent cum Sewage<br></td>
+                <td> CETP -554 m3/day<br></td>
+                <td>Reuse in process</td>
+                <!-- <td></td> -->
+            </tr>
+
+
+        </table>
+    </div>
+    <div class="one">
+
+        <P style="text-align: left; font-size: 30px; color: purple;">Production Details</P>
+        <table style="width:100%; font-size: 30px;">
+            <tr>
+                <th>Product Manufactured</th>
+                <th>Details of
+                    Hazardous
+                    Chemicals Used
+                    with quantity &
+                    Purpose</th>
+                <th>Waste type</th>
+                <th>Cat No</th>
+                <th>Quantity</th>
+                <th>Mode of Disposal</th>
+
+            </tr>
+            <tr>
+                <td rowspan="6">
+                    1. Automobile Vehicle Chassis<br> <br>
+                    2. Foundry
+                    Casting<br> <br>
+                    3. Diesel Engine<br> <br>
+                    4. Axles (Front
+                    & Rear)<br> <br>
+                    5. Gear Box<br> <br>
+                    6. Crownwheel Pinion
+                </td>
+                <td rowspan="6">Propane:Maximum Quantity 200 MT + 450 MT <br> <br>
+                    Propane Bullets 2 Nos. of 100 MT capacity each & <br> <br>
+                    Propane Bullets 3 Nos. of 150 MT capacity each <br> <br>
+                    Consumption : 2020-21 <br> <br>
+                    Propane : 1945.68 MT <br> <br>
+                    Acetylene : 3815.21 m3 <br> <br>
+                    LPG: 207.24 MT <br> <br>
+                    LPG Bullets : Total 60 MT (20 MT *2 & 10 MT *2 )</td>
+                <td>Used Oil</td>
+                <td>
+                    5.1
+                </td>
+                <td>37.44</td>
+                <td>Recycling</td>
+            </tr>
+            <tr>
+
+                <td>Oily rags</td>
+                <td>
+                    5.2
+                </td>
+                <td>61.76</td>
+                <td>Co-processing</td>
+            </tr>
+            <tr>
+
+                <td>Grinding Sludge</td>
+                <td>
+                    5.2
+                </td>
+                <td>169.52</td>
+                <td>Co-processing</td>
+            </tr>
+            <tr>
+
+                <td>Waste cutting oil</td>
+                <td>
+                    5.3
+                </td>
+                <td>81.6</td>
+                <td>Recycling</td>
+            </tr>
+            <tr>
+
+                <td>Phosphate Sludge</td>
+                <td>
+                    12.5
+                </td>
+                <td>25.08</td>
+                <td>Co-processing</td>
+            </tr>
+            <tr>
+
+                <td>Paint Sludge</td>
+                <td>
+                    21.1
+                </td>
+                <td>428.77</td>
+                <td>Co-processing</td>
+            </tr>
+        </table>
+    </div>
+    <div class="two">
+
+        <P style="text-align: left; font-size: 30px; color: purple;">Production Details</P>
+        <table style="width:100%; font-size: 30px;">
+            <tr>
+                <th>Product Manufactured</th>
+                <th>Details of
+                    Hazardous
+                    Chemicals Used
+                    with quantity &
+                    Purpose</th>
+                <th>Waste type</th>
+                <th>Cat No</th>
+                <th>Quantity</th>
+                <th>Mode of Disposal</th>
+
+            </tr>
+            <tr>
+                <td rowspan="6">
+                    1. Automobile Vehicle Chassis<br> <br>
+                    2. Foundry
+                    Casting<br> <br>
+                    3. Diesel Engine<br> <br>
+                    4. Axles (Front
+                    & Rear)<br> <br>
+                    5. Gear Box<br> <br>
+                    6. Crownwheel Pinion
+                </td>
+                <td rowspan="6">Propane:Maximum Quantity 200 MT + 450 MT <br> <br>
+                    Propane Bullets 2 Nos. of 100 MT capacity each & <br> <br>
+                    Propane Bullets 3 Nos. of 150 MT capacity each <br> <br>
+                    Consumption : 2020-21 <br> <br>
+                    Propane : 1945.68 MT <br> <br>
+                    Acetylene : 3815.21 m3 <br> <br>
+                    LPG: 207.24 MT <br> <br>
+                    LPG Bullets : Total 60 MT (20 MT *2 & 10 MT *2 )</td>
+                <td>Nickle
+                    Catalyst</td>
+                <td>
+                    Sch IV
+                </td>
+                <td>2.24</td>
+                <td>SLF</td>
+            </tr>
+            <tr>
+
+                <td>Incineration
+                    Ash</td>
+                <td>
+                    37.2
+                </td>
+                <td>14 </td>
+                <td>Reuse</td>
+            </tr>
+            <tr>
+
+                <td>ETP Sludge</td>
+                <td>
+                    35.3
+                </td>
+                <td>28.06</td>
+                <td>Co-processing</td>
+            </tr>
+            <tr>
+
+                <td>Spent Solvent</td>
+                <td>
+                    20.3
+                </td>
+                <td>18.92</td>
+                <td>Recycling</td>
+            </tr>
+            <tr>
+
+                <td>Glass Wool</td>
+                <td>
+                    -
+                </td>
+                <td>2.46</td>
+                <td>SLF</td>
+            </tr>
+            <tr>
+
+                <td>E-waste</td>
+                <td>
+                    Sch IV
+                </td>
+                <td>5.58</td>
+                <td>Recycling</td>
+            </tr>
+        </table>
+    </div>
+    <div class="third">
+
+        <P style="text-align: left; font-size: 30px; color: purple;">Production Details</P>
+        <table style="width:100%; font-size: 30px;">
+            <tr>
+                <th>Product Manufactured</th>
+                <th>Details of
+                    Hazardous
+                    Chemicals Used
+                    with quantity &
+                    Purpose</th>
+                <th>Waste type</th>
+                <th>Cat No</th>
+                <th>Quantity</th>
+                <th>Mode of Disposal</th>
+
+            </tr>
+            <tr>
+                <td rowspan="6">
+                    1. Automobile Vehicle Chassis<br> <br>
+                    2. Foundry
+                    Casting<br> <br>
+                    3. Diesel Engine<br> <br>
+                    4. Axles (Front
+                    & Rear)<br> <br>
+                    5. Gear Box<br> <br>
+                    6. Crownwheel Pinion
+                </td>
+                <td rowspan="6">Propane:Maximum Quantity 200 MT + 450 MT <br> <br>
+                    Propane Bullets 2 Nos. of 100 MT capacity each & <br> <br>
+                    Propane Bullets 3 Nos. of 150 MT capacity each <br> <br>
+                    Consumption : 2020-21 <br> <br>
+                    Propane : 1945.68 MT <br> <br>
+                    Acetylene : 3815.21 m3 <br> <br>
+                    LPG: 207.24 MT <br> <br>
+                    LPG Bullets : Total 60 MT (20 MT *2 & 10 MT *2 )</td>
+                <td>Battery
+                    Waste</td>
+                <td>
+                    Sch IV
+                </td>
+                <td>29.22</td>
+                <td>Recycling</td>
+            </tr>
+            <tr>
+
+                <td>Discarded
+                    Containers</td>
+                <td>
+                    33.1
+                </td>
+                <td>173.12 </td>
+                <td>Recycling</td>
+            </tr>
+            <tr>
+
+                <td>Scrap Cable
+                    harness</td>
+                <td>
+                    Sch IV
+                </td>
+                <td>25.33</td>
+                <td>Recycling</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>
